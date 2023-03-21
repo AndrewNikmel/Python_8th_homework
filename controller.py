@@ -10,10 +10,12 @@ def main():
         if choice == 1:
             inform = input.get_info()
             view.add_data(inform)
-        if choice == 2:
-            searcher = input.search()
-            view.searching(searcher)
-        if choice == 3:
+        elif choice == 2:
+            users = view.read_data()
+            # print(users)
+            name = input.ask_person()
+            view.find_person(users, name )
+        elif choice == 3 or choice not in range(1,3):
             break
 
 
